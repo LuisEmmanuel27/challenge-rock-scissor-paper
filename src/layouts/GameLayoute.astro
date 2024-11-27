@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets"
+import Score from "@/components/Score"
+import Modal from "@/components/Modal.astro"
+
+const {logo, rules} = Astro.props
+---
+<section class="container h-screen flex flex-col justify-between items-center p-7">
+  <header>
+    <Image src={logo} alt="logo"/>
+    <Score />
+  </header>
+	<slot />
+  <Modal rules={rules}/>
+  <footer class="self-end">
+    <button>rules</button>
+  </footer>
+</section>

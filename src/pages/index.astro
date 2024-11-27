@@ -1,0 +1,19 @@
+---
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title='rock-paper-scsissors'>
+	<header>
+		<h1 class="text-5xl mb-12">
+			Crazy Rock Paper Scissors Game
+		</h1>
+	</header>
+
+	<section class="border-2 p-6 rounded-2xl flex flex-col items-center justify-center gap-5">
+		<h2 class="text-4xl">Select a type of game</h2>
+		<nav class="flex items-center gap-10 text-3xl uppercase">
+			<a href="/games/normal" class="link transition-all border-b-2 border-transparent hover:border-b-2 hover:border-white">normal</a>
+			<a href="/games/advanced" class="link transition-all border-b-2 border-transparent hover:border-b-2 hover:border-white">advanced</a>
+		</nav>
+	</section>
+</Layout>

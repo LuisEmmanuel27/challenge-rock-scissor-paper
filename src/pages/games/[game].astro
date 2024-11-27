@@ -1,0 +1,29 @@
+---
+import type { GetStaticPaths } from "astro";
+import AdvancedGame from "@/components/AdvancedGame.astro";
+import NormalGame from "@/components/NormalGame.astro";
+import Layout from "@/layouts/Layout.astro";
+
+export const getStaticPaths = (() => {
+  return [
+    {
+      params: {
+        game: 'normal'
+      }
+    },
+    {
+      params: {
+        game: 'advanced'
+      }
+    }
+  ];
+}) satisfies GetStaticPaths;
+
+const { game } = Astro.params;
+---
+
+<Layout title={game}>
+  {
+    game === 'normal' ? <NormalGame/> : <AdvancedGame/>
+  }
+</Layout>
