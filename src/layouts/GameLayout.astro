@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets"
 import Score from "@/components/Score"
-import Modal from "@/components/Modal.astro"
+import Modal from "@/components/Modal"
 
 const {logo, rules} = Astro.props
 ---
@@ -11,8 +11,8 @@ const {logo, rules} = Astro.props
     <Score client:load/>
   </header>
 	<slot />
-  <Modal rules={rules}/>
+  <Modal rules={rules} client:load/>
   <footer class="self-end">
-    <button>rules</button>
+    <button id="openModal" class="border-2 border-Neutral-DarkText py-2 px-12 rounded-xl">RULES</button>
   </footer>
 </section>
