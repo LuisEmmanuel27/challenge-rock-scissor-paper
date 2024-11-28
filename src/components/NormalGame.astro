@@ -1,9 +1,34 @@
 ---
+import { Image } from 'astro:assets'
 import GameLayout from '@/layouts/GameLayout.astro'
-import logoImg from '@/assets/logo.svg'
 import rulesImg from '@/assets/image-rules.svg'
+import logoImg from '@/assets/logo.svg'
+import triangle from '@/assets/bg-triangle.svg'
+import rockImg from '@/assets/icon-rock.svg'
+import paperImg from '@/assets/icon-paper.svg'
+import scissorsImg from '@/assets/icon-scissors.svg'
+import GameItem from './GameItem'
+
+const gameItems = [
+  { id: 'rock', icon: rockImg, position: 'center', colorStart: 'from-Rock-start', colorEnd: 'to-Rock-end'},
+  { id: 'paper', icon: paperImg, position: 'left', colorStart: 'from-Paper-start', colorEnd: 'to-Paper-end'},
+  { id: 'scissors', icon: scissorsImg, position: 'right', colorStart: 'from-Scissors-start', colorEnd: 'to-Scissors-end'}
+]
 ---
 
 <GameLayout logo={logoImg} rules={rulesImg}>
-  <h1>NORMAL GAME</h1>
+  <section class="relative">
+    {
+      gameItems.map(item => (
+        <GameItem 
+          id={item.id}
+          icon={item.icon}
+          position={item.position}
+          colorStart={item.colorStart}
+          colorEnd={item.colorEnd}
+        />
+      ))
+    }
+    <Image src={triangle} alt="base-game"/>
+  </section>
 </GameLayout>

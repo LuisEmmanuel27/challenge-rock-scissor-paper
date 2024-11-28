@@ -1,4 +1,4 @@
-export interface SvgProps{
+export interface SvgProps {
   format: string,
   height: number,
   width: number,
@@ -7,4 +7,12 @@ export interface SvgProps{
 
 export interface ModalProps {
   rules: SvgProps
+}
+
+export interface GameItemProps {
+  id: string,
+  icon: SvgProps,
+  position: string,
+  colorStart: string,
+  colorEnd: string
 }
