@@ -8,18 +8,12 @@ export default {
 					'start': 'hsl(214, 47%, 23%)',
 					'end': 'hsl(237, 49%, 15%)'
 				},
-				'ScissorsGrad': {
-					'start': 'hsl(39, 89%, 49%)',
-					'end': 'hsl(40, 84%, 53%)'
-				},
-				'PaperGrad': {
-					'start': 'hsl(230, 89%, 62%)',
-					'end': 'hsl(230, 89%, 65%)'
-				},
-				'RockGrad': {
-					'start': 'hsl(349, 71%, 52%)',
-					'end': 'hsl(349, 70%, 56%)'
-				},
+				'Scissors-start': 'hsl(39, 89%, 49%)',
+      	'Scissors-end': 'hsl(40, 84%, 53%)',
+      	'Paper-start': 'hsl(230, 89%, 62%)',
+      	'Paper-end': 'hsl(230, 89%, 65%)',
+      	'Rock-start': 'hsl(349, 71%, 52%)',
+      	'Rock-end': 'hsl(349, 70%, 56%)',
 				'LizardGrad': {
 					'start': 'hsl(261, 73%, 60%)',
 					'end': 'hsl(261, 72%, 63%)'
@@ -37,6 +31,10 @@ export default {
 			fontFamily: {
 				'barlow': ['Barlow Semi Condensed', 'sans-serif']
 			},
+			boxShadow: {
+        'outCir': 'inset 0 -5px 0 rgb(0,0,0,.25)',
+        'innCir': 'inset 0 5px 0 rgb(0,0,0,.25)',
+      },
 		},
 	},
 	plugins: [],
